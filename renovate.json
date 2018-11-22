@@ -6,5 +6,6 @@
   "major": {
     "automerge": false
   },
-  "prHourlyLimit": 0
+  "prHourlyLimit": 0,
+  "rebaseStalePrs": true
 }
