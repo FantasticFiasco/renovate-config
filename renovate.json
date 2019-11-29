@@ -1,11 +1,22 @@
 {
   "extends": [
-    "config:base"
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":maintainLockFilesDisabled",
+    ":autodetectPinVersions",
+    "group:monorepos",
+    "group:recommended"
   ],
   "automerge": true,
   "major": {
     "automerge": false
   },
-  "prHourlyLimit": 0,
-  "rebaseStalePrs": true
+  "rebaseStalePrs": true,
+  "ignorePaths": [
+    "**/node_modules/**"
+  ]
 }
