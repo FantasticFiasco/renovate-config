@@ -11,12 +11,15 @@
     "group:monorepos",
     "group:recommended"
   ],
+  "assignees": [
+    "@FantasticFiasco"
+  ],
   "automerge": true,
+  "ignorePaths": [
+    "**/node_modules/**"
+  ],
   "major": {
     "automerge": false
   },
-  "rebaseStalePrs": true,
-  "ignorePaths": [
-    "**/node_modules/**"
-  ]
+  "rebaseStalePrs": true
 }
