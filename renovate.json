@@ -18,6 +18,7 @@
   "ignorePaths": [
     "**/node_modules/**"
   ],
+  "labels": ["dependencies"],
   "major": {
     "automerge": false
   },
