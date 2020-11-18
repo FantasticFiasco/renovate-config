@@ -1,26 +1,15 @@
 {
-  "extends": [
-    ":separateMajorReleases",
-    ":combinePatchMinorReleases",
-    ":ignoreUnstable",
-    ":prImmediately",
-    ":semanticPrefixFixDepsChoreOthers",
-    ":updateNotScheduled",
-    ":maintainLockFilesDisabled",
-    ":autodetectPinVersions",
-    "group:monorepos",
-    "group:recommended"
-  ],
-  "assignees": [
-    "@FantasticFiasco"
-  ],
-  "automerge": true,
-  "ignorePaths": [
-    "**/node_modules/**"
-  ],
+  "extends": ["config:base"],
+  "assignees": ["@FantasticFiasco"],
   "labels": ["dependencies"],
-  "major": {
-    "automerge": false
-  },
-  "rebaseStalePrs": true
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ],
+  "ignorePaths": ["**/node_modules/**"],
+  "vulnerabilityAlerts": {
+    "labels": ["security"]
+  }
 }
