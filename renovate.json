@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", ":prHourlyLimitNone"],
   "assignees": ["@FantasticFiasco"],
   "labels": ["dependencies"],
   "packageRules": [
@@ -9,6 +9,7 @@
     }
   ],
   "ignorePaths": ["**/node_modules/**"],
+  "rebaseWhen": "behind-base-branch",
   "vulnerabilityAlerts": {
     "labels": ["security"]
   }
